@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Una pregunta para ti ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<img src="image.pou.png" alt="Wall-E" class="foto">
+    <div class="contenedor">
+        <div class="corazon">❤️</div>
+
+        <h1>¿Me perdonas amor?</h1>
+        <p>Porfa perdoname 💔</p>
+
+        <div class="botones">
+            <button id="si">¡SÍ!</button>
+            <button id="no">No</button>
+        </div>
+    </div>
+
+    <script>
+        const botonSi = document.getElementById("si");
+        const botonNo = document.getElementById("no");
+        let escala = 1;
+
+        botonNo.addEventListener("click", () => {
+            escala += 0.25;
+            botonSi.style.transform = `scale(${escala})`;
+        });
+
+        botonSi.addEventListener("click", () => {
+            document.querySelector(".contenedor").innerHTML = `
+                <div class="corazon">❤️</div>
+                <h1>¡SABÍA QUE DIRÍAS QUE SÍ!</h1>
+                <p>Te amoOooOoOo muchísimoOoOoOoO mi vida hermosaaa ❤️
+                  Prometo no volver a decir algo así 💔</p>
+                <div class="corazon">❤️</div>
+            `;
+        });
+    </script>
+
+</body>
+</html>
